@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="sample.Controller">
+    <padding>
+        <Insets top="10" />
+        <Insets bottom="10" />
+        <Insets left="10" />
+    </padding>
+    <VBox minHeight="385" spacing="10">
+        <Label text="请在下面输入想要的颜色" />
+        <HBox spacing="10">
+            <Label text="R" />
+            <TextField fx:id="redText" focusTraversable="false" prefWidth="50" promptText="0" />
+            <Label text="G" />
+            <TextField fx:id="greenText" focusTraversable="false" prefWidth="50" promptText="0" />
+            <Label text="B" />
+            <TextField fx:id="blueText" focusTraversable="false" prefWidth="50" promptText="0" />
+            <Label text="误差" />
+            <TextField fx:id="offsetText" focusTraversable="false" prefWidth="50" promptText="0" text="3" />
+        </HBox>
+        <HBox spacing="10">
+            <Button fx:id="captureBtn" text="截取屏幕" />
+            <Button fx:id="searchBtn" text="搜索染色" />
+            <Button text="自动定位" />
+        </HBox>
+        <CheckBox fx:id="checkBox" text="截屏时隐藏当前窗口" />
+        <Canvas fx:id="canvas" height="300" width="300" />
+
+    </VBox>
+</HBox>
